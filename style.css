@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(
+    125deg,
+    #ecfcff 0%,
+    #ecfcff 40%,
+    #b2fcff calc(40% + 1px),
+    #b2fcff 60%,
+    #5edfff calc(60% + 1px),
+    #5edfff 72%,
+    #3e64ff calc(72% + 1px),
+    #3e64ff 100%
+  );
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Contenedor general */
+
+.container-f {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Contenedos de titulo y boton */
+
+.container {
+  width: 25rem;
+  height: auto;
+  padding: 1rem;
+  background-color: #3e64ff;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Titulo */
+
+.title {
+  width: 20rem;
+  height: auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #faf7f0;
+  border-radius: 15px;
+  align-items: center;
+}
+
+/* Boton */
+
+button {
+  padding: 10px 15px;
+  border: unset;
+  border-radius: 10px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  background-color: #5edfff;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px #5edfff;
+  box-shadow: 4px 8px 19px -3px #5edfff;
+  transition: all 250ms;
+}
+
+button:hover {
+  color: #555252;
+}
+
+button:hover::before {
+  width: 100%;
+}
