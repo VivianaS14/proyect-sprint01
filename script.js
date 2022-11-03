@@ -116,10 +116,26 @@ function doClient() {
 
 // Funcion para contar el efectivo en el cajero
 function cashierAtm() {
+    let container = document.querySelector('.container-r');
+    container.innerHTML = "";
+    let ul = document.createElement('ul');
+    ul.setAttribute('class', 'result');
+
     for (let e in cash) {
+        let li = document.createElement('li');
+        let text = document.createTextNode(`Hay $${cash[e].amount * cash[e].value} en billetes de $${cash[e].value}`);
+        li.appendChild(text);
+        ul.appendChild(li);
+        container.appendChild(ul);
         console.log(`Hay ${cash[e].amount * cash[e].value} en billetes de ${cash[e].value}`);
         totalAtm += (cash[e].amount * cash[e].value);
     }
+
+    let p = document.createElement('p');
+    p.setAttribute('class', 'result');
+    let text = document.createTextNode(`Total en cajero: $${totalAtm}`);
+    p.appendChild(text);
+    container.appendChild(p);
     console.log(`Total en cajero: $${totalAtm}`);
 }
 

@@ -97,3 +97,19 @@ button:hover {
 button:hover::before {
   width: 100%;
 }
+
+/* Contenedor de resultado cajero */
+
+.result {
+  width: 15rem;
+  height: auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #faf7f0;
+  border-radius: 15px;
+}
+
+li {
+    list-style-type: none;
+    padding: 0.3rem;
+}
